@@ -99,3 +99,25 @@ h1 {
 .form__button:hover {
   box-shadow: 0 10px 36px rgba(0, 0, 0, 0.15);
 }
+
+// Input focus label
+.form__input:focus + .form__label {
+  top: -0.5rem;
+  left: 0.8rem;
+  color: var(--first-color);
+  font-size: var(--small-font-size);
+  font-weight: 500;
+  z-index: 10;
+}
+// Input focus sticky top label
+.form__input:not(:placeholder-shown).form__input:not(:focus) + .form__label {
+  top: -0.5rem;
+  left: 0.8rem;
+  font-size: var(--small-font-size);
+  font-weight: 500;
+  z-index: 10;
+}
+// Input focus
+.form__input:focus {
+  border: 1.5px solid var(--first-color);
+}
